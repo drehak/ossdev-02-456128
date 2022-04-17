@@ -5,3 +5,22 @@ My solution for [assignment 1](https://github.com/crocs-muni/open-source-develop
 ## Usage
 
 Provide two integers on standard input (one or two lines). The program will print all integers between these two numbers (including).
+
+## Requirements
+
+- C++11 compiler
+- CMake >= 3.22.3
+- [CppUTest](https://cpputest.github.io/)
+
+## Building
+
+```
+cmake ..
+make
+```
+
+## Testing
+
+```
+./test
+```
