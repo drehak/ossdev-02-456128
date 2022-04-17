@@ -4,6 +4,6 @@ cmake_minimum_required(VERSION 3.22.3)
 project(sieve)
 
 # add the executable
-add_executable(sieve sieve.cpp)
+add_executable(sieve sieve.cpp main.cpp)
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c++11 -Wall -Wextra -Werror -pedantic -g")
