@@ -7,6 +7,8 @@ project(sieve)
 add_executable(sieve sieve.cpp main.cpp)
 add_executable(test sieve.cpp test.cpp)
 
+include_directories(/usr/include/CppUTest /usr/include/CppUTestExt)
+
 # CppUTest
 find_package(CppUTest REQUIRED)
 target_link_libraries(test PRIVATE
