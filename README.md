@@ -12,6 +12,7 @@ Provide two integers on standard input (one or two lines). The program will prin
 
 - C++11 compiler
 - CMake >= 3.22.3
+- [cpplint](https://github.com/cpplint/cpplint) (for linting)
 
 ## Building
 
@@ -26,4 +27,11 @@ See [spito/testing](https://github.com/spito/testing) for instructions on the te
 
 ```
 ./test
+```
+
+## Linting
+
+```
+pip install cpplint
+cpplint *.cpp
 ```
