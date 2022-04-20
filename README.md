@@ -33,5 +33,5 @@ See [spito/testing](https://github.com/spito/testing) for instructions on the te
 
 ```
 pip install cpplint
-cpplint *.cpp
+cpplint --filter=-build/include *.cpp
 ```

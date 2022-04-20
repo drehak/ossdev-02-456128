@@ -35,4 +35,4 @@ jobs:
 
     - name: Lint
       working-directory: ${{github.workspace}}
-      run: cpplint sieve.cpp main.cpp test.cpp
+      run: cpplint --filter=-build/include sieve.cpp main.cpp test.cpp
