@@ -10,7 +10,6 @@ Provide two integers on standard input (one or two lines). The program will prin
 
 - C++11 compiler
 - CMake >= 3.22.3
-- [CppUTest](https://cpputest.github.io/)
 
 ## Building
 
