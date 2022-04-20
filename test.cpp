@@ -15,7 +15,7 @@ TEST(BasicSieve)
 TEST(BasicSlicedSieve)
 {
    std::vector<int> result = sliced_sieve(10, 20);
-   std::vector<int> expected = { 11, 13, 17, 19 };
+   std::vector<int> expected = { 13, 17, 19 };
    ASSERT(result == expected);
 }
 
