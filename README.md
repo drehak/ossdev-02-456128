@@ -20,6 +20,8 @@ make
 
 ## Testing
 
+See [spito/testing](https://github.com/spito/testing) for instructions on the testing framework.
+
 ```
 ./test
 ```
