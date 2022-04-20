@@ -28,7 +28,7 @@ TEST(basic_sliced_sieve_empty) {
 #include "./main.cpp"
 #undef main
 
-TEST(sieve_correct) {
+TEST(sieve_correct_1) {
     // https://stackoverflow.com/a/29338386
     char argv0[] = "./sieve";
     char *argv[] = { argv0, NULL };
@@ -44,6 +44,33 @@ TEST(sieve_correct) {
         "13\n"
         "17\n"
         "19\n");
+}
+
+TEST(sieve_correct_2) {
+    char argv0[] = "./sieve";
+    char *argv[] = { argv0, NULL };
+    INPUT_STRING(
+        "10 20\n");
+
+    int ret = sieve_main(1, argv);
+
+    ASSERT(ret == 0);
+    ASSERT_FILE(stdout,
+        "11\n"
+        "13\n"
+        "17\n"
+        "19\n");
+}
+
+TEST(sieve_correct_large) {
+    char argv0[] = "./sieve";
+    char *argv[] = { argv0, NULL };
+    INPUT_STRING(
+        "1 999999\n");
+
+    int ret = sieve_main(1, argv);
+
+    ASSERT(ret == 0);
 }
 
 TEST(sieve_help_short) {
@@ -96,6 +123,32 @@ TEST(sieve_wrong_input_1) {
     char *argv[] = { argv0, NULL };
     INPUT_STRING(
         "10\n");
+
+    int ret = sieve_main(1, argv);
+
+    ASSERT(ret != 0);
+    ASSERT_FILE(stderr,
+        "Input error\n");
+}
+
+TEST(sieve_wrong_input_2) {
+    char argv0[] = "./sieve";
+    char *argv[] = { argv0, NULL };
+    INPUT_STRING(
+        "asdfdsgadfgha\n"
+        "qwertqwoutyqwrt\n");
+
+    int ret = sieve_main(1, argv);
+
+    ASSERT(ret != 0);
+    ASSERT_FILE(stderr,
+        "Input error\n");
+}
+
+TEST(sieve_wrong_input_empty) {
+    char argv0[] = "./sieve";
+    char *argv[] = { argv0, NULL };
+    INPUT_STRING("");
 
     int ret = sieve_main(1, argv);
 
